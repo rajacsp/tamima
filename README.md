@@ -8,26 +8,26 @@ A Tamil-focused large language model family built on top of LLaMA 2. Tamima exte
 
 ## Models
 
-| Model | Type | Training Data | Base | Parameters |
-|-------|------|---------------|------|------------|
-| Tamima 7B Base | Base | 12 GB Tamil corpus | LLaMA 7B | 7B |
-| Tamima 13B Base | Base | 4 GB Tamil corpus | LLaMA 13B | 13B |
-| Tamima 7B Instruct | Instruction-tuned | 145k instructions | Tamima 7B Base | 7B |
-| Tamima 13B Instruct | Instruction-tuned | 145k instructions | Tamima 13B Base | 13B |
+| Model               | Type              | Training Data      | Base            | Parameters | Link |
+| ------------------- | ----------------- | ------------------ | --------------- | ---------- | ---- |
+| Tamima 7B Base      | Base              | 12 GB Tamil corpus | LLaMA 7B        | 7B         | [HuggingFace](https://huggingface.co/rajacsp/tamima-7b-base-v0.1) |
+| Tamima 13B Base     | Base              | 4 GB Tamil corpus  | LLaMA 13B       | 13B        | TBD  |
+| Tamima 7B Instruct  | Instruction-tuned | 145k instructions  | Tamima 7B Base  | 7B         | TBD  |
+| Tamima 13B Instruct | Instruction-tuned | 145k instructions  | Tamima 13B Base | 13B        | TBD  |
 
 Quantized GGUF versions (Q4_K_M, Q5_K_M, Q8_0) are also available for all models.
 
 ### Tamima 7B Base Stats
 
-| Stat | Value |
-|------|-------|
-| Vocab size | 47,957 |
-| Total parameters | 6,869,135,360 |
-| Model size (FP16) | ~13.1 GB |
-| Layers | 32 |
-| Hidden size | 4096 |
-| Attention heads | 32 |
-| Max sequence length | 4096 |
+| Stat                | Value         |
+| ------------------- | ------------- |
+| Vocab size          | 47,957        |
+| Total parameters    | 6,869,135,360 |
+| Model size (FP16)   | ~13.1 GB      |
+| Layers              | 32            |
+| Hidden size         | 4096          |
+| Attention heads     | 32            |
+| Max sequence length | 4096          |
 
 You can generate these stats locally by running:
 
@@ -59,6 +59,7 @@ TBD
    ```
 
 Optional Modelfile tweaks for your hardware:
+
 ```
 PARAMETER num_thread 8
 PARAMETER num_gpu 0
@@ -134,4 +135,3 @@ The trained model weights inherit Meta's LLaMA 2 license. See [LLAMA2-LICENSE](L
 ```
 
 ---
-
