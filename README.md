@@ -6,8 +6,6 @@ A Tamil-focused large language model family built on top of LLaMA 2. Tamima exte
 
 This is a maintained fork of [Tamil-LLaMA](https://github.com/abhinand5/tamil-llama) by Abhinand Balachandran. The upstream repository is no longer actively updated, so this fork carries the work forward.
 
-Paper: [Tamil-Llama: A New Tamil Language Model Based on Llama 2](https://arxiv.org/abs/2311.05845)
-
 ---
 
 ## What's Inside
