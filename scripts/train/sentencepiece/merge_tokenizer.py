@@ -47,19 +47,19 @@ print(f"New model pieces: {len(llama_spm.pieces)}")
 
 ## Save
 output_sp_dir = "merged_tokenizer_sp"
-output_hf_dir = "merged_tokenizer_hf"  # the path to save Tamil-LLaMA tokenizer
+output_hf_dir = "merged_tokenizer_hf"  # the path to save Tamima tokenizer
 os.makedirs(output_sp_dir, exist_ok=True)
-with open(output_sp_dir + "/tamil_llama.model", "wb") as f:
+with open(output_sp_dir + "/tamima.model", "wb") as f:
     f.write(llama_spm.SerializeToString())
-tokenizer = LlamaTokenizer(vocab_file=output_sp_dir + "/tamil_llama.model")
+tokenizer = LlamaTokenizer(vocab_file=output_sp_dir + "/tamima.model")
 
 tokenizer.save_pretrained(output_hf_dir)
-print(f"Tamil-LLaMA tokenizer has been saved to {output_hf_dir}")
+print(f"Tamima tokenizer has been saved to {output_hf_dir}")
 
 
 # Test
 llama_tokenizer = LlamaTokenizer.from_pretrained(llama_tokenizer_dir)
-tamil_llama_tokenizer = LlamaTokenizer.from_pretrained(output_hf_dir)
+tamima_tokenizer = LlamaTokenizer.from_pretrained(output_hf_dir)
 print(tokenizer.all_special_tokens)
 print(tokenizer.all_special_ids)
 print(tokenizer.special_tokens_map)
@@ -67,8 +67,8 @@ text = """கோப்பையை உறுதி செய்யுமா �
 Can India secure the World Cup trophy?"""
 print("Test text:\n", text)
 llama_tokenized = llama_tokenizer.tokenize(text)
-tamil_llama_tokenized = tamil_llama_tokenizer.tokenize(text)
+tamima_tokenized = tamima_tokenizer.tokenize(text)
 print(f"Tokenized by LLaMA tokenizer:{llama_tokenized}")
 print(f"LLaMA tokenizer n_tokens={len(llama_tokenized)}")
-print(f"Tokenized by Tamil-LLaMA tokenizer:{tamil_llama_tokenized}")
-print(f"Tamil LLaMA tokenizer n_tokens={len(tamil_llama_tokenized)}")
+print(f"Tokenized by Tamima tokenizer:{tamima_tokenized}")
+print(f"Tamima tokenizer n_tokens={len(tamima_tokenized)}")

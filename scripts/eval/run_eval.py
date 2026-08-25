@@ -110,7 +110,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model-output-field",
         help="Field name of the model output in the CSV file.",
-        default="tamil-llama",
+        default="tamima",
     )
     parser.add_argument(
         "--max-retries",
