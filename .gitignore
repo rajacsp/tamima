@@ -55,6 +55,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+cover/
 
 # Translations
 *.mo
@@ -77,6 +78,7 @@ instance/
 docs/_build/
 
 # PyBuilder
+.pybuilder/
 target/
 
 # Jupyter Notebook
@@ -98,6 +100,9 @@ ipython_config.py
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
+
+# pdm
+.pdm.toml
 
 # Celery stuff
 celerybeat-schedule
@@ -132,6 +137,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
 .vscode/
 
 .~lock.*
