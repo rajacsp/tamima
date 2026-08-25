@@ -17,6 +17,24 @@ A Tamil-focused large language model family built on top of LLaMA 2. Tamima exte
 
 Quantized GGUF versions (Q4_K_M, Q5_K_M, Q8_0) are also available for all models.
 
+### Tamima 7B Base Stats
+
+| Stat | Value |
+|------|-------|
+| Vocab size | 47,957 |
+| Total parameters | 6,869,135,360 |
+| Model size (FP16) | ~13.1 GB |
+| Layers | 32 |
+| Hidden size | 4096 |
+| Attention heads | 32 |
+| Max sequence length | 4096 |
+
+You can generate these stats locally by running:
+
+```bash
+python model_stats.py
+```
+
 ---
 
 ## Benchmarks
