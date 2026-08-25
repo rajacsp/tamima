@@ -1,6 +1,6 @@
 # Tamima
 
-<img src="assets/tamima-v0.1.png" alt="Tamima" width="300">
+<img src="assets/tamima-v0.2.png" alt="Tamima" width="300">
 
 A Tamil-focused large language model family built on top of LLaMA 2. Tamima extends the LLaMA architecture with 16,000 additional Tamil tokens and applies LoRA-based training on a dedicated Tamil corpus to produce models that generate and comprehend Tamil text fluently.
 
